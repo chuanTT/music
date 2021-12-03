@@ -358,7 +358,7 @@
             const Time = this.currentSong;
             heding.innerHTML = this.currentSong.name;
             poster__cd.style.backgroundImage = `url('${this.currentSong.image}')`;
-            audio.src = this.currentSong.path;
+            audio.src = `.${this.currentSong.path}`;
             time__total.innerHTML = `/ ${Time.minute<10?'0'+Time.minute:Time.minute} : ${Time.seconds<10?'0'+Time.seconds:Time.seconds}`
             
         },
