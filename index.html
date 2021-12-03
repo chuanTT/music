@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Mood Music -Nguyễn Đình Chuân</title>
+</head>
+<body>
+        <div class="music">
+
+            <div class="music__view">
+                <!-- Tên bài hát -->
+                <div class="Show_songs">
+                        <header>
+                                <h4>Now playing:</h4>
+                                <h2>Tên bài hát</h2>
+                        </header>
+                </div>
+
+                <!-- Hiện thị ảnh -->
+                <div class="poster">
+                    <div class="poster__cd" style="background-image:  url('image/hiền_hồ.jpg');"></div>
+                </div>
+
+                <!-- control -->
+                <div class="contror Display">
+                    <!-- Node quay lại -->
+                        <div class="btn redo">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <!-- Nút lùi -->
+                        <div class="btn caret-left">
+                            <i class="fas fa-step-backward"></i>
+                        </div>
+                        <!-- Nút play và pause -->
+                        <div class="btn play">
+                            <i class="fas fa-play-circle icon-play"></i>
+                            <i class="fas fa-pause-circle icon-pause"></i>
+                        </div>
+                        <!-- Nut next -->
+                        <div class="btn caret-right">
+                            <i class="fas fa-step-forward"></i>
+                        </div>
+                        <!-- Chế độ ngẫu nhiên -->
+                        <div class="btn random">
+                            <i class="fas fa-random"></i>
+                        </div>
+                </div>
+                <!-- Nút tua -->
+                <div class="tentacle">
+                    <div class="tentacle__time">
+                        <div class="Time">
+                            <span class="time__update">
+                                <span class="update_Minute">00</span>
+                                <span class="compartment">:</span>
+                                <span class="update_Seconds">00</span>
+                            </span>
+                            <span class="time__total">/ 0:00</span>
+                        </div>
+
+                        <!-- Mute chỉnh âm lương -->
+                        <div class="Mute  Big_sound Mutes">
+                            <div id="prosessBarSound">
+                                <input type="range" step="1" min="0" max="100" value="50" class="RangeMute">
+                                <div id="prosessMute"></div>
+                            </div>
+                            <div class="MuteSounds">
+                                <i class="fas fa-volume-mute muteST"></i>
+                                <i class="fas fa-volume-down muteST"></i>
+                                <i class="fas fa-volume-up muteST"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="progressBarRange">
+                        <input type="range" min="0" max="100" step="1" value="0" class="tentacle__drag">
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+                <audio src="" id="audio"></audio>
+            </div>
+
+            <!-- danh sách -->
+            <div class="playlist"></div>
+        </div>
+        <script src="/js/app.js"></script>
+</body>
+</html>
